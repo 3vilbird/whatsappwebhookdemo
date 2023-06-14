@@ -10,10 +10,9 @@ var bodyParser = require("body-parser");
 var express = require("express");
 var app = express();
 var xhub = require("express-x-hub");
-const serverless = require("serverless-http");
 
 app.set("port", process.env.PORT || 5000);
-//app.listen(app.get("port"));
+app.listen(app.get("port"));
 
 app.use(xhub({ algorithm: "sha1", secret: process.env.APP_SECRET }));
 app.use(bodyParser.json());
@@ -62,5 +61,4 @@ app.post("/instagram", function (req, res) {
   res.sendStatus(200);
 });
 
-module.exports = app;
-module.exports.handler = serverless(app);
+app.listen();
