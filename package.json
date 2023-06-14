@@ -4,7 +4,7 @@
   "description": "Graph API Webhooks Sample",
   "main": "index.js",
   "scripts": {
-    "build":"netlify-lambda build express",
+    "build":"netlify-lambda build .",
     "start": "node index.js"
   },
   "dependencies": {
