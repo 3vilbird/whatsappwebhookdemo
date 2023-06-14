@@ -4,12 +4,14 @@
   "description": "Graph API Webhooks Sample",
   "main": "index.js",
   "scripts": {
+    "build":"netlify-lambda build express",
     "start": "node index.js"
   },
   "dependencies": {
     "body-parser": "~1.15.0",
     "express": "~4.13.3",
-    "express-x-hub": "^1.0.4"
+    "express-x-hub": "^1.0.4",
+    "serverless-http": "^3.2.0"
   },
   "engines": {
     "node": "0.12.7"
